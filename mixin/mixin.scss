@@ -1,0 +1,16 @@
+@mixin tomato($tomato: tomato){
+    color: $tomato;
+}
+
+@mixin white($white: white){
+    color: $white;
+}
+
+@mixin black($black: #3d3d3d){
+    color: $black;
+}
+
+@mixin blue($blue: #155dc2){
+    color: $blue;
+}
+

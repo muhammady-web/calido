@@ -1,0 +1,1718 @@
+@import "../radiator/mixin/mixin.scss";
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("./fonts/CeraPro-Regular.eot");
+  src: local("Cera Pro Regular"), local("CeraPro-Regular"),
+    url("./fonts/CeraPro-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/CeraPro-Regular.woff") format("woff"),
+    url("./fonts/CeraPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("./fonts/CeraPro-Light.eot");
+  src: local("Cera Pro Light"), local("CeraPro-Light"),
+    url("./fonts/CeraPro-Light.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/CeraPro-Light.woff") format("woff"),
+    url("./fonts/CeraPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("./fonts/CeraPro-Black.eot");
+  src: local("Cera Pro Black"), local("CeraPro-Black"),
+    url("./fonts/CeraPro-Black.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/CeraPro-Black.woff") format("woff"),
+    url("./fonts/CeraPro-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("./fonts/CeraPro-Medium.eot");
+  src: local("Cera Pro Medium"), local("CeraPro-Medium"),
+    url("./fonts/CeraPro-Medium.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/CeraPro-Medium.woff") format("woff"),
+    url("./fonts/CeraPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("./fonts/CeraPro-Bold.eot");
+  src: local("Cera Pro Bold"), local("CeraPro-Bold"),
+    url("./fonts/CeraPro-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/CeraPro-Bold.woff") format("woff"),
+    url("./fonts/CeraPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("./fonts/CeraPro-Thin.eot");
+  src: local("Cera Pro Thin"), local("CeraPro-Thin"),
+    url("./fonts/CeraPro-Thin.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/CeraPro-Thin.woff") format("woff"),
+    url("./fonts/CeraPro-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Cera Pro";
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  position: relative;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  // border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+  // border-bottom: 0.3px solid tomato;
+  margin-bottom: 12px;
+  // padding-top: 5px;
+  //   background-color: #3d3d3d;
+}
+
+.logo_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// .logo_greenshop {
+//   background-image: url(./GreenShopimg/Vector.svg);
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: contain;
+//   width: 35px;
+//   height: 35px;
+// }
+
+// .logo_greenshop_text {
+//   // color: #46A358;
+// //   @include tomato;
+//   color: #155dc2;
+//   margin-left: 5px;
+//   font-weight: 700;
+//   font-size: 16px;
+//   line-height: 20px;
+//   span{
+//     color: tomato;
+//   }
+// }
+
+.logo {
+  width: 100px;
+  height: 60px;
+  // background-color: #155dc2;
+  background: url(img/calido\ logo\ new\ final.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  height: 60px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #3d3d3d;
+  //   @include white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  transition: all 0.1s ease 2s;
+}
+
+.menu a:nth-child(1) {
+  width: 100px;
+}
+
+.menu .start-home,
+a:nth-child(1):hover ~ .animation {
+  width: 60px;
+  left: 0;
+}
+
+.menu a:nth-child(2) {
+  width: 100px;
+}
+
+.menu .start-shop,
+a:nth-child(2):hover ~ .animation {
+  width: 64px;
+  left: 100px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+.menu a:nth-child(3) {
+  width: 90px;
+}
+
+.menu .start-plant,
+a:nth-child(3):hover ~ .animation {
+  width: 50px;
+  left: 200px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+.menu a:nth-child(4) {
+  width: 100px;
+}
+
+.menu .start-blogs,
+a:nth-child(4):hover ~ .animation {
+  width: 80px;
+  left: 290px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+.animation {
+  position: absolute;
+  height: 90%;
+  width: 45px;
+  border-bottom: 3px solid #155dc2;
+
+  z-index: 0;
+  transition: all 0.5s ease 0s;
+  bottom: -2px;
+}
+
+.logoin {
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo_search {
+  // color: #3d3d3d;
+  color: #fff;
+  font: 700 16px/20px "Cera Pro";
+  // width: 20px;
+  // height: 20px;
+  // margin-right: 30px;
+  border: 1px solid #155dc2;
+  background-color: #155dc2;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.6s;
+  &:hover {
+    background-color: #fff;
+    // color: #155dc2;
+    @include tomato;
+    border-color: tomato;
+  }
+}
+
+.logo_search:hover .search-action {
+  // color: #46A358;
+  @include tomato;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.search-action input[type="text"] {
+  width: 150px;
+  height: 30px;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px 0 0 10px;
+  background: #ffffff;
+  outline: 0;
+  color: #727272;
+  box-shadow: 0px 0px 20px rgb(0 0 0 / 6%);
+}
+
+.search-action button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 24px;
+  color: #ffffff;
+  width: 40px;
+  height: 30px;
+  background: tomato;
+  border-radius: 0px 6px 6px 0px;
+  border: 0;
+  cursor: pointer;
+}
+
+
+
+.login_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #46a358;
+  width: 100px;
+  height: 35px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login_logo {
+  background-image: url(./GreenShopimg/Logout.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.login_logo-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.section_navigation {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: #fff;
+}
+
+// .section_first {
+//   background-color: #3d3d3d;
+//   // width: 100vh;
+//   background: url(./img/header3.jpg);
+//   // background: url(catalog/colors.png);
+//   width: 100%;
+
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   justify-content: center;
+//   align-items: center;
+//   height: 550px;
+//   opacity: 0.9;
+//   .header {
+//     position: relative;
+//     padding-top: 120px;
+//     width: 490px;
+//     // background-color: #FFFFFF;
+//     &_title {
+//       // margin-top: 100px;
+//       font: bold 46px "Cera Pro";
+//       @include tomato;
+//     }
+//     &_subtitle {
+//       font: 400 19px/29px "Cera Pro";
+//       @include white;
+//       margin: 13px 0 35px;
+//     }
+//     &_click {
+//       .more {
+//         color: #fff;
+//         background: #1b1e7e;
+//         font: 400 16px/20px "Cera Pro";
+//         padding: 13px 50px;
+//         transition: all 0.5s;
+//         &:hover {
+//           background: #fff;
+//           color: #3d3d3d;
+//           transition: all 0.5s;
+//         }
+//       }
+//     }
+//   }
+// }
+
+.zagolovok {
+  // margin: auto;
+  text-align: center;
+  font: bold 2em "Cera Pro";
+  color: #1c1d3d;
+  // color: tomato;
+}
+
+.section_connection {
+  margin: 70px 0 70px;
+  .tips {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    &_card {
+      // border-radius: 10px;
+      // box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+      &-title {
+        text-align: center;
+        font: 500 18px "Cera Pro";
+      }
+      .literal {
+        position: relative;
+        bottom: 3px;
+      }
+      &-image {
+        img {
+          width: 300px;
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+.section_about {
+  .company {
+    margin: 120px 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_info {
+      width: 580px;
+      position: relative;
+      bottom: 25px;
+      &-title {
+        color: #1c1d3d;
+      }
+      &-subtitle {
+        font: 400 14px/26px "Cera Pro";
+        color: #3d3d3d;
+        span {
+          position: relative;
+          top: 20px;
+        }
+      }
+    }
+    &_img {
+      background: url(img/company_img.jpg);
+      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+      width: 389px;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      justify-content: center;
+      align-items: center;
+      height: 550px;
+      opacity: 0.9;
+      border-bottom-right-radius: 151px 50px;
+      border-top-left-radius: 150px 70px;
+    }
+  }
+}
+
+.section_models {
+  &-page {
+    background: url(./img/models.jpg);
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 800px;
+    padding-bottom: 80px;
+    h4 {
+      font: 600 34px/48px "Montserrat";
+      text-transform: uppercase;
+      padding: 70px 0 0 50px;
+    }
+    .catalog {
+      opacity: 0.9;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      &_card {
+        &-line {
+          width: 1px;
+          height: 70px;
+          background-color: #fff;
+        }
+        &-text {
+          margin-top: 5px;
+          color: #fff;
+          text-transform: uppercase;
+          font: 500 20px "Montserrat";
+          a {
+            color: #fff;
+            transition: all 0.5s;
+            &:hover {
+              color: #161964;
+              transition: all 0.9s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.section_performance {
+  padding: 100px 0;
+  // background-color: #727272;
+  .how {
+    // color: #fff;
+  }
+  .made {
+    // align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+    // margin-top: 50px;
+    width: 805px;
+    margin: 50px auto;
+    &_left {
+      height: 400px;
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &-card {
+        font: 600 14px/24px "Montserrat";
+        color: #3d3d3d;
+        text-align: left;
+        &__text {
+          width: 100px;
+          // color: #fff;
+        }
+        .long_text {
+          width: 250px;
+          position: absolute;
+          bottom: 153px;
+        }
+        &__line {
+          width: 360px;
+          height: 1px;
+          background: #000;
+          // background-color: #fff;
+          margin-top: 10px;
+          position: absolute;
+        }
+        .long_line {
+          position: absolute;
+          bottom: 143px;
+        }
+      }
+    }
+    &_right {
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 470px;
+      &-card {
+        font: 600 14px/24px "Montserrat";
+        color: #3d3d3d;
+        text-align: right;
+        &__text {
+          width: 105px;
+          align-items: end;
+          position: relative;
+        }
+        &__line {
+          width: 340px;
+          height: 1px;
+          right: 170px;
+          margin-top: 10px;
+          background: #000;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
+
+.section_last {
+  margin-top: 100px;
+  // background-color: #3d3d3d;
+
+  .footer {
+    color: #0d0d0d80;
+    height: 200px;
+    // background-color: #ddd;
+    display: flex;
+    justify-content: space-between;
+    &_first {
+      width: 100px;
+      height: 60px;
+      // background-color: #155dc2;
+      background: url(img/calido\ logo\ new\ final.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &_second {
+      font: 500 20px/32px "Cera Pro";
+      &-menu {
+        a {
+          color: #1c1d3d;
+          text-decoration: none;
+          &:hover {
+            color: #1c1d3d;
+          }
+        }
+      }
+    }
+    &_third {
+      .number {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #155dc2;
+        &-icon {
+          img {
+            // width: 30px;
+            // height: 30px;
+            margin-right: 12px;
+            margin-top: 6px;
+          }
+        }
+        &-text {
+          font: 600 28px "Cera Pro";
+        }
+      }
+    }
+    &_fourth {
+      &-adress {
+        align-items: center;
+        display: flex;
+        font-size: 18px;
+        img {
+          padding-right: 5px;
+          width: 25px;
+          height: 20px;
+        }
+      }
+      &-social {
+        width: 140px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+    }
+  }
+  .copyright {
+    text-align: center;
+    font: 900 18px/27px "Inter";
+    color: #0d0d0d80;
+    margin-bottom: 20px;
+  }
+}
+
+.mail {
+  color: black;
+}
+
+.tg {
+  color: #161964;
+  transition: 0.5s all;
+  &:hover {
+    color: tomato;
+    transition: 0.5s all;
+  }
+}
+
+// .slider {
+//   width: 1140px;
+//   height: 810px;
+//   overflow: hidden;
+//   // border: 10px solid #000;
+// }
+
+// .middle {
+//   margin-top: 25px;
+//   position: relative;
+//   top: 400px;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
+// .navigate {
+//   position: absolute;
+//   bottom: 40px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   display: flex;
+// }
+
+// .bar {
+//   width: 30px;
+//   height: 8px;
+//   margin: 6px;
+//   cursor: pointer;
+//   background-color: #000;
+//   opacity: 0.5;
+//   border-radius: 10px;
+//   transition: all 0.4s ease;
+// }
+
+// .bar:hover {
+//   opacity: 1;
+//   transform: scale(1.1);
+// }
+
+// input[name="r"] {
+//   position: absolute;
+//   visibility: hidden;
+// }
+
+// .slides {
+//   width: 400%;
+//   height: 100%;
+//   display: flex;
+// }
+
+// .slide {
+//   width: 25%;
+//   transition: all 0.6s ease;
+//   h4 {
+//     position: absolute;
+//     color: #fff;
+//     font: 600 48px "Montserrat";
+//     text-transform: uppercase;
+//     margin: 70px 0 0 50px;
+//   }
+// }
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+#r1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+  margin-left: -25%;
+}
+
+#r3:checked ~ .s1 {
+  margin-left: -50%;
+}
+
+#r4:checked ~ .s1 {
+  margin-left: -75%;
+}
+
+.section_format {
+  background-image: url(img/image-046.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  .zayavka {
+    .form {
+      width: 340px;
+      height: 440px;
+      background: #e6e6e6;
+      border-radius: 8px;
+      box-shadow: 0 0 40px -10px #000;
+      margin: calc(50vh - 220px) auto;
+      padding: 20px 30px;
+      max-width: calc(100vw - 40px);
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+      position: relative;
+      top: 150px;
+      margin-left: 100px;
+    }
+    h3 {
+      margin: 10px 0;
+      padding-bottom: 10px;
+      width: 225px;
+      color: #78788c;
+      border-bottom: 3px solid #78788c;
+      font-size: 22px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      background: none;
+      outline: none;
+      resize: none;
+      border: 0;
+      font-family: "Montserrat", sans-serif;
+      transition: all 0.3s;
+      border-bottom: 2px solid #bebed2;
+    }
+    input:focus {
+      border-bottom: 2px solid #78788c;
+    }
+    p:before {
+      content: attr(type);
+      display: block;
+      margin: 28px 0 0;
+      font-size: 14px;
+      color: #5a5a5a;
+    }
+    button {
+      float: right;
+      padding: 8px 12px;
+      margin: 8px 0 0;
+      font-family: "Montserrat", sans-serif;
+      border: 2px solid #78788c;
+      background: 0;
+      color: #5a5a6e;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    button:hover {
+      background: #78788c;
+      color: #fff;
+    }
+  }
+}
+
+.section_catalog {
+  margin-top: 30px;
+  .swiper {
+    width: 100%;
+    height: 100%;
+    .swiper-slide {
+      // text-align: center;
+      font-size: 18px;
+      background: #fff;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      .card {
+        h4 {
+          position: absolute;
+          z-index: 1;
+          color: #fff;
+          font: 600 48px "Montserrat";
+          text-transform: uppercase;
+          margin: 70px 0 0 50px;
+        }
+        img {
+          z-index: 0;
+        }
+        //   height: 500px;
+        //   // display: flex;
+        //  background: url(../radiator/img/infinity.jpg);
+        //  background-size: contain;
+        //  background-position: center center;
+        //  background-repeat: no-repeat;
+        //  display: block;
+      }
+    }
+  }
+
+  // .swiper-slide img {
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: cover;
+  // }
+}
+
+@media (max-width: 1440px) {
+  .works-gallery__item {
+    width: 33.33%;
+  }
+}
+@media (max-width: 1199px) {
+  // width: 33.33%;
+}
+
+@media (max-width: 991px) {
+  .container {
+    // max-width: 980px;
+    padding: 5px 50px;
+  }
+  .navbar {
+    // margin: auto;
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+
+  .slider {
+    width: 940px;
+  }
+
+  .slides {
+    width: 440%;
+  }
+  .middle {
+    left: 48%;
+  }
+  .slide {
+    width: 25%;
+    .img {
+      width: 95%;
+    }
+  }
+
+  .logo_search {
+    font-size: 14px;
+  }
+
+  .slide {
+    h4 {
+      font-size: 34px;
+    }
+  }
+  .slider {
+    height: 600px;
+  }
+
+  .middle {
+    top: 270px;
+  }
+  .navigate {
+    bottom: 50px;
+    left: 52%;
+  }
+
+  .section_connection {
+    margin-top: 50px;
+    .zagolovok {
+      font-size: 28px;
+    }
+    .tips {
+      &_card {
+        &-title {
+          font-size: 16px;
+        }
+        &-image {
+          img {
+            width: 250px;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+
+  .section_models {
+    &-page {
+      height: 627px;
+      h4 {
+        font-size: 27px;
+        padding-top: 10px;
+      }
+      .catalog {
+        justify-content: space-around;
+        margin-top: 20px;
+        padding: 0 20px;
+        &_card {
+          &-line {
+            height: 50px;
+          }
+          &-text {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .section_about {
+    .company {
+      margin: 80px 0 50px;
+      &_info {
+        width: 450px;
+        &-subtitle {
+          font: 400 12px/24px "Cera Pro";
+          span {
+            top: 10px;
+          }
+        }
+      }
+      &_img {
+        width: 355px;
+        height: 502px;
+      }
+    }
+  }
+
+  .section_performance {
+    padding: 50px 0;
+    .how {
+      font-size: 1.75em;
+    }
+    .made {
+      width: 700px;
+      margin-top: 20px;
+      &_left {
+        height: 300px;
+        &-card {
+          font: 600 11px/20px "Montserrat";
+          &__text {
+            width: 80px;
+          }
+          .long_text {
+            width: 200px;
+            bottom: 199px;
+          }
+
+          &__line {
+            width: 310px;
+            margin-top: 5px;
+          }
+          .long_line {
+            bottom: 188px;
+          }
+        }
+      }
+      &_picture {
+        img {
+          padding-top: 20px;
+          width: 320px;
+          height: 560px;
+        }
+      }
+      &_right {
+        margin-top: 75px;
+        height: 345px;
+        &-card {
+          font: 600 11px/20px "Montserrat";
+          &__text {
+            width: 84px;
+          }
+          &__line {
+            width: 310px;
+            right: 140px;
+          }
+        }
+      }
+    }
+  }
+
+  .section_format {
+    .zayavka {
+      .form {
+        width: 289px;
+        height: 374px;
+        top: 230px;
+        h3 {
+          font-size: 16px;
+          width: 180px;
+        }
+        input {
+          padding: 5px;
+        }
+        p:before {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .section_last {
+    margin-top: 50px;
+    .footer {
+      height: 130px;
+      &_first {
+        position: relative;
+        top: -10px;
+        width: 80px;
+      }
+      &_second {
+        font: 500 16px/25px "Cera Pro";
+      }
+      &_third {
+        .number {
+          &-icon {
+            img {
+              width: 23px;
+              height: 22px;
+              margin-right: 8px;
+            }
+          }
+          &-text {
+            font-size: 22px;
+          }
+        }
+        .adress {
+          font-size: 15px;
+        }
+      }
+      &_fourth {
+        &-adress {
+          font-size: 15px;
+        }
+        &-social {
+          width: 102px;
+          svg {
+            width: 33px;
+            height: 32px;
+          }
+        }
+      }
+    }
+    .copyright {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    // max-width: 760px;
+    padding: 5px 50px;
+  }
+  .navbar {
+    // margin: auto;
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  .menu a {
+    font-size: 12px;
+    height: 50px;
+  }
+
+  .menu a:nth-child(1) {
+    width: 65px;
+  }
+
+  .menu .start-home,
+  a:nth-child(1):hover ~ .animation {
+    width: 45px;
+    left: 0;
+  }
+
+  .menu a:nth-child(2) {
+    width: 65px;
+  }
+
+  .menu .start-shop,
+  a:nth-child(2):hover ~ .animation {
+    width: 50px;
+    left: 65px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+
+  .menu a:nth-child(3) {
+    width: 55px;
+  }
+
+  .menu .start-plant,
+  a:nth-child(3):hover ~ .animation {
+    width: 38px;
+    left: 130px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+
+  .menu a:nth-child(4) {
+    width: 65px;
+  }
+
+  .menu .start-blogs,
+  a:nth-child(4):hover ~ .animation {
+    width: 60px;
+    left: 185px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+
+  .logo_search {
+    font-size: 12px;
+    padding: 7px 11px;
+  }
+
+  .section_catalog {
+    margin-top: 0;
+    .swiper{
+      .swiper-slide{
+        .card{
+          h4{
+            font: 600 35px "Montserrat" ;
+          }
+        }
+
+      }
+    }
+  }
+
+  .section_connection {
+    margin-top: -60px;
+    margin-bottom: 0px;
+    .zagolovok {
+      font-size: 22px;
+    }
+    .tips {
+      margin-top: 50px;
+      &_card {
+        &-title {
+          font-size: 14px;
+        }
+        &-image {
+          img {
+            width: 200px;
+            height: 240px;
+          }
+        }
+      }
+    }
+  }
+
+  .section_models {
+    &-page {
+      height: 530px;
+      h4 {
+        font-size: 22px;
+        padding-top: 50px;
+      }
+      .catalog {
+        justify-content: space-around;
+        top: -233px;
+        &_card {
+          &-line {
+            height: 50px;
+          }
+          &-text {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .section_about {
+    .company {
+      margin: 50px 0 50px;
+      &_info {
+        width: 450px;
+        margin-right: 31px;
+        &-title {
+          h1 {
+            font-size: 25px;
+          }
+        }
+        &-subtitle {
+          font: 400 9px/16px "Cera Pro";
+          span {
+            top: 10px;
+          }
+        }
+      }
+      &_img {
+        width: 268px;
+        height: 335.6px;
+      }
+    }
+  }
+
+  .section_performance {
+    padding: 30px 0;
+    .how {
+      font-size: 1.375em;
+    }
+    .made {
+      width: 500px;
+      margin-top: -20px;
+      &_left {
+        height: 300px;
+        &-card {
+          font: 600 9px/16px "Montserrat";
+          &__text {
+            width: 80px;
+          }
+          .long_text {
+            width: 200px;
+            bottom: 143px;
+          }
+          &__line {
+            width: 230px;
+            margin-top: 5px;
+          }
+
+          .short {
+            margin-top: 8px;
+          }
+          .long_line {
+            bottom: 137px;
+          }
+        }
+      }
+      &_picture {
+        img {
+          padding-top: 20px;
+          width: 288px;
+          height: 504px;
+        }
+      }
+      &_right {
+        margin-top: 75px;
+        height: 345px;
+        &-card {
+          font: 600 9px/16px "Montserrat";
+          &__text {
+            width: 70px;
+            margin-top: 5px;
+          }
+          &__line {
+            margin-top: 5px;
+            width: 210px;
+            right: 135px;
+          }
+        }
+      }
+    }
+  }
+
+  .section_format {
+    background-size: contain;
+    height: 545px;
+    .zayavka {
+      .form {
+        width: 231.2px;
+        height: 280.2px;
+        top: 190px;
+        margin-left: 70px;
+        padding: 10px 20px;
+        h3 {
+          font-size: 12px;
+          width: 130px;
+        }
+        input {
+          padding: 5px;
+          font-size: 10px;
+        }
+        p:before {
+          font-size: 10px;
+          margin: 10px 0 0;
+        }
+        button {
+          font-size: 10px;
+          padding: 6px 10px;
+        }
+      }
+    }
+  }
+
+  .section_last {
+    margin-top: 50px;
+    .footer {
+      height: 130px;
+      &_first {
+        position: relative;
+        top: -15px;
+        width: 70px;
+      }
+      &_second {
+        font: 500 13px/20px "Cera Pro";
+      }
+      &_third {
+        .number {
+          &-icon {
+            img {
+              width: 16px;
+              height: 15px;
+            }
+          }
+          &-text {
+            font-size: 18px;
+          }
+        }
+        .adress {
+          font-size: 12px;
+        }
+      }
+      &_fourth {
+        &-adress {
+          font-size: 13px;
+          img {
+            width: 22px;
+            height: 21px;
+          }
+        }
+        &-social {
+          width: 100px;
+          svg {
+            width: 28px;
+            height: 27px;
+          }
+        }
+      }
+    }
+    .copyright {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 576px){
+
+
+  .container {
+    padding: 5px 30px;
+  }
+  .navbar {
+    font-size: 10px;
+    margin-bottom: 1px;
+  }
+
+  .logo {
+    width: 53px;
+  }
+
+  .menu a {
+    font-size: 10px;
+    height: 40px;
+  }
+
+  .menu a:nth-child(1) {
+    width: 58px;
+  }
+
+  .menu .start-home,
+  a:nth-child(1):hover ~ .animation {
+    width: 38px;
+    left: 0;
+  }
+
+  .menu a:nth-child(2) {
+    width: 58px;
+  }
+
+  .menu .start-shop,
+  a:nth-child(2):hover ~ .animation {
+    width: 42px;
+    left: 58px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+
+  .menu a:nth-child(3) {
+    width: 55px;
+  }
+
+  .menu .start-plant,
+  a:nth-child(3):hover ~ .animation {
+    width: 30px;
+    left: 116px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+
+  .menu a:nth-child(4) {
+    width: 65px;
+  }
+
+  .menu .start-blogs,
+  a:nth-child(4):hover ~ .animation {
+    width: 52px;
+    left: 171px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+
+  .logo_search {
+    font-size: 9px;
+    padding: 6px 8px;
+  }
+
+  .section_catalog {
+    margin-top: 0px;
+    .swiper{
+      .swiper-slide{
+        .card{
+          h4{
+            font: 600 25px "Montserrat" ;
+            margin-top: 35px;
+          }
+        }
+        
+      }
+    }
+  }
+
+  
+  .section_connection {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    .zagolovok {
+      font-size: 18px;
+    }
+    .tips {
+      margin-top: 30px;
+      &_card {
+        &-title {
+          font-size: 12px;
+        }
+        &-image {
+          img {
+            width: 150px;
+            height: 180px;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+  .section_models {
+    margin-top: 30px;
+    &-page {
+      height: 365px;
+      h4 {
+        font-size: 18px;
+        padding-top: 10px;
+        padding-left: 30px;
+      }
+      .catalog {
+        justify-content: space-around;
+        // top: -433px;
+        margin-top: 165px;
+        &_card {
+          &-line {
+            height: 40px;
+          }
+          &-text {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .section_about {
+    .company {
+      margin: 50px 0 50px;
+      &_info {
+        width: 450px;
+        margin-right: 31px;
+        bottom: 15px;
+        &-title {
+          h1 {
+            font-size: 22px;
+          }
+        }
+        &-subtitle {
+          font: 400 7px/14px "Cera Pro";
+          span {
+            top: 5px;
+          }
+        }
+      }
+      &_img {
+        width: 268px;
+        height: 255.6px;
+        border-bottom-right-radius: 89px 50px;
+        border-top-left-radius: 89px 70px;
+      }
+    }
+  }
+
+  .section_performance {
+    padding: 20px 0;
+    .how {
+      font-size: 1.025em;
+    }
+    .made {
+      width: 400px;
+      margin-top: -20px;
+      &_left {
+        height: 260px;
+        &-card {
+          font: 600 8px/14px "Montserrat";
+          &__text {
+            width: 60px;
+          }
+          .long_text {
+            width: 140px;
+            bottom: 138px;
+          }
+          &__line {
+            width: 175px;
+            margin-top: 5px;
+          }
+
+          .short {
+            margin-top: 8px;
+          }
+          .long_line {
+            // bottom: 137px;
+            margin-bottom: -5px;
+          }
+        }
+      }
+      &_picture {
+        img {
+          padding-top: 20px;
+          width: 259.2px;
+          height: 453.6px;
+        }
+      }
+      &_right {
+        margin-top: 75px;
+        height: 300px;
+        &-card {
+          font: 600 8px/14px "Montserrat";
+          &__text {
+            width: 60px;
+            margin-top: 5px;
+          }
+          &__line {
+            margin-top: 5px;
+            width: 160px;
+            right: 15.3%;
+          }
+        }
+      }
+    }
+  }
+
+  .section_format {
+    background-size: contain;
+    height: 410px;
+    .zayavka {
+      .form {
+        width: 200px;
+        height: 252.18px;
+        top: 127px;
+        margin-left: 70px;
+        padding: 8px 18px;
+        h3 {
+          font-size: 10px;
+          width: 110px;
+        }
+        input {
+          padding: 3px;
+          font-size: 8px;
+        }
+        p:before {
+          font-size: 8px;
+          margin: 10px 0 0;
+        }
+        button {
+          font-size: 8px;
+          padding: 6px 10px;
+        }
+      }
+    }
+  }
+
+  .section_last {
+    margin-top: 30px;
+    .footer {
+      height: 95px;
+      &_first {
+        position: relative;
+        top: -15px;
+        width: 55px;
+      }
+      &_second {
+        font: 500 10px/17px "Cera Pro";
+      }
+      &_third {
+        .number {
+          &-icon {
+            img {
+              width: 14px;
+              height: 13px;
+            }
+          }
+          &-text {
+            font-size: 15px;
+          }
+        }
+        .adress {
+          font-size: 10px;
+        }
+      }
+      &_fourth {
+        &-adress {
+          font-size: 10px;
+          img {
+            width: 19px;
+            height: 18px;
+          }
+        }
+        &-social {
+          width: 80px;
+          svg {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+    .copyright {
+      font-size: 10px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+
+
+
+
+
+  
+
+
+

@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "script-runner": "^0.1.8"
+  },
+  "main": "index.html",
+  "name": "swiper-pagination-fraction",
+  "scripts": {
+    "build": "echo This is a static template, there is no bundler or bundling involved!",
+    "start": "serve"
+  },
+  "tags": [
+    "swiper"
+  ]
+}
